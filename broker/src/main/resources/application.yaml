@@ -1,0 +1,32 @@
+server:
+  port: 11500
+
+spring:
+  application:
+    name: PubSubBroker
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pubsub
+    schema: topics
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+      pool-name: simplyPool
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: update
+      default-schema: topics
+  rsocket:
+    server:
+      port: 7000
+      transport: tcp
+
+logging:
+  charset:
+    console: UTF-8

@@ -1,0 +1,10 @@
+server:
+  port: 11700
+
+spring:
+  application:
+    name: PubSubSubscriber
+
+logging:
+  charset:
+    console: UTF-8

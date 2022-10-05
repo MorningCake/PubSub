@@ -1,0 +1,10 @@
+server:
+  port: 11600
+
+spring:
+  application:
+    name: PubSubPublisher
+
+logging:
+  charset:
+    console: UTF-8
